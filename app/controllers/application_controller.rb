@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
   delete '/articles/:id' do
     @article = Articles.all.select do |el|
       if el.id == params[:id]
-        el.destroy
+        Article.destroy
       end
     end
     @articles = Article.all
