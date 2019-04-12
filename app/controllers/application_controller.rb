@@ -44,7 +44,6 @@ class ApplicationController < Sinatra::Base
   delete '/articles/:id' do
     @articles = Article.all
     @articles.select do |el|
-       binding.pry
       if el.id == params[:id].to_i
         Article.destroy(el.id)
       end
