@@ -45,7 +45,7 @@ class ApplicationController < Sinatra::Base
     @articles = Article.all
     @articles.select do |el|
        binding.pry
-      if el.id == params[:id]
+      if el.id == params[:id].to_i
        
         Article.destroy(el.id)
       end
