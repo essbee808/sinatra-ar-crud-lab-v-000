@@ -1,11 +1,11 @@
 <h2><%= @article.title %></h2>
 <h3><%= @article.content %></h3>
 
-<form method="PATCH" action="/articles/<%= @article.id %>">
+<form method="POST" action="/articles/<%= @article.id %>">
   <label for="title">Title: </label>
-    <input type="text" id="title" name="title">
+    <input type="text" id="title" name="title"><br>
   <label for="content">Content: </label>
-    <input type="text" id="content" name="content">
+    <input type="text" id="content" name="content"><br>
   <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <input type="submit" value="submit">
+  <input type="submit" value="Submit">
 </form>
