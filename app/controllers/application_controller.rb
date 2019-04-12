@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
 
   delete '/articles/:id' do
     @articles = Articles.all
-    @article = Articles.all.select do |el|
+    @articles.select do |el|
        binding.pry
       if el.id == params[:id]
        
